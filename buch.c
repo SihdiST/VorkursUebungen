@@ -24,6 +24,4 @@ void print(Buch){
 
 }
 
-int main(void){
-	return 0;
-}
+
