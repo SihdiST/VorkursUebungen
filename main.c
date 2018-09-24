@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<string.h>
+#include<stdlib.h>
 #include "buch.h"
 #include "kunde.h"
 
@@ -32,7 +33,7 @@ int searchBook(char pSearch[], int pSort, Buch pBooks[], int pLength){
 	else return 0;
 }
 
-void addBook(char pISBN[], char pName[], char pAuthor[], Buch pBooks[], int pLength){
+void addBook(char pISBN[], char pName[], char pAuthor[], Buch *pBooks, int pLength){
 	if((searchBook(pISBN, 0, pBooks, pLength) != 0) && (searchBook(pName, 1, pBooks, pLength) != 0) &&  (searchBook(pAuthor, 2, pBooks, pLength) != 0)) return;
 	Buch add = createBook(pISBN, pName, pAuthor);
 	 
@@ -46,11 +47,11 @@ void addBook(char pISBN[], char pName[], char pAuthor[], Buch pBooks[], int pLen
 		}
 		i++;
 	}
-	printf("Datenbank voll.");
+	printf("Datenbank voll.\n");
 	
 }
 
-void deleteBook(char pSearch[], int pSort, Buch pBooks[], int pLength){
+void deleteBook(char pSearch[], int pSort, Buch *pBooks, int pLength){
 	
 	NULLBUCH
 	
@@ -66,6 +67,7 @@ Buch* createBookArr(int pLength){
 	NULLBUCH
 	
 	Buch *bookArr;
+	bookArr =(Buch*)calloc(pLength, sizeof(Buch));
 	
 	for(int i = 0;i < pLength;i++) bookArr[i] = nullbuch;
 	
@@ -79,10 +81,13 @@ void printBookArr(Buch arr[], int pLength){
 }
 
 int main(void){
-	Buch *bookArr = createBookArr(4);
-	printBookArr(bookArr, 4);
-	addBook("123456789", "W3 R N00bs", "Jonas Hännes & Peter Altmaier", bookArr, 4);
-	printBookArr(bookArr, 4);
+	NULLBUCH
+	Buch *bookArr = createBookArr(1);
+	printBookArr(bookArr, 1);
+	addBook("123456789", "W3 R N00bs", "Jonas Hännes & Peter Altmaier", bookArr, 1);
+	printBookArr(bookArr, 1);
+	printf("\n\nNullbuch:\n\n");
+	printBook(nullbuch);
 	
 	return 0;
 }
