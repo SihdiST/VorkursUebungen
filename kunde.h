@@ -1,5 +1,5 @@
 struct Kunde{
-    unsigned int kunden_nr;
-    char[100] name;
-    char[100] vorname;
-}
+	int[100] = kundenNr;
+	char[100] = name;
+	char[100] = vorname;
+};
