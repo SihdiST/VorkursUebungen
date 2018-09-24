@@ -10,3 +10,4 @@ typedef struct{
 void editBook(Buch* pBook, char pISBN[], char pName[], char pAuthor[]);
 Buch createBook(char pISBN[], char pName[], char pAuthor[]);
 int cmpBooks(Buch pCmp1, Buch pCmp2);
+void printBook(Buch pBook);
