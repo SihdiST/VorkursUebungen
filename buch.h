@@ -1,6 +1,8 @@
-struct Buch{
-    char[100] isbn;
-    char[100] buchname;
-    char[100] autor;
-    
-}
+typedef struct{
+	char[100] = isbn;
+	char[100] = name;
+	char[100] = author;
+}Buch;
+
+void editBook(Buch pBook);
+Buch createBook(char[] pISBN, char[] pName, char[] pAuthor);
