@@ -15,6 +15,4 @@ Kunde createKunde(int pNummer, char *pName, char *pVorname){
 	return new;
 }
 
-int main(void){
-	return 0;
-}
+
