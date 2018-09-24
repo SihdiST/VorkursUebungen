@@ -1,4 +1,4 @@
-typedef struct{
+typedef struct buch{
 	char[100] = isbn;
 	char[100] = name;
 	char[100] = author;
