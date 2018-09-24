@@ -2,7 +2,7 @@
 #include "buch.h"
 
 void editBook(Buch* pBook, char[] pISBN, char[] pName, char[] pAuthor){
-	Book edit = createBook(pISBN, pName, pAuthor);
+	Buch edit = createBook(pISBN, pName, pAuthor);
 	*pBook = edit;
 }
 
