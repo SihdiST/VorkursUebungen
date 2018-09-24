@@ -9,9 +9,9 @@ void editBook(Buch* pBook, char[] pISBN, char[] pName, char[] pAuthor){
 
 Buch createBook(char[] pISBN, char[] pName, char[] pAuthor){
 	Buch new;
-	String.copy(new.isbn, pISBN);
-	String.copy(new.name, pName);
-	String.copy(new.author, pAuthor);
+	strcpy(new.isbn, pISBN);
+	strcpy(new.name, pName);
+	strcpy(new.author, pAuthor);
 	return new;
 }
 
