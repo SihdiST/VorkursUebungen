@@ -21,10 +21,10 @@ int cmpBooks(Buch pCmp1, Buch pCmp2){
 }
 
 void printBook(Buch pBook){
-	printf("------------------------ Buch ------------------------\n\n");
+	printf("------------------------ Buch ------------------------\n");
 	printf("|ISBN:		%s\n", pBook.isbn);	
 	printf("|Name:		%s\n", pBook.name);
-	printf("|Author:		%s\n", pBook.author);
+	printf("|Author:	%s\n", pBook.author);
 	printf("------------------------------------------------------\n\n");
 	
 }
