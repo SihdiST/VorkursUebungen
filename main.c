@@ -86,8 +86,6 @@ void deleteBookArr(Buch *pBookArr){
 	free(pBookArr);
 }
 
-//######################################################
-
 int searchKunde(char pSearch[], int pSort, Kunde pKunde[], int pLength){
 if(pSort == 0){
 		int i = 0;
