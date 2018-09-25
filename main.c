@@ -81,6 +81,10 @@ void printBookArr(Buch arr[], int pLength){
 	printf("######################################################\n\n");
 }
 
+void deleteBookArr(Buch *pBookArr){
+	free(pBookArr);
+}
+
 int main(void){
 	//NULLBUCH
 	
@@ -110,6 +114,8 @@ int main(void){
 	printBook(bookArr[searchBook("123456789", 0, bookArr, 2) - 1]);
 	deleteBook("123456789", 0, bookArr, 2);
 	printBookArr(bookArr, 2);
+	
+	deleteBookArr(bookArr);
 	
 	
 	//printf("\n\nNullbuch:\n\n");
