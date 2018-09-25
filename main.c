@@ -5,6 +5,7 @@
 #include "kunde.h"
 
 Buch nullbuch;
+Kunde nullkunde;
 
 int searchBook(char pSearch[], int pSort, Buch pBooks[], int pLength){
 	if(pSort == 0){
