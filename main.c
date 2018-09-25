@@ -85,6 +85,53 @@ void deleteBookArr(Buch *pBookArr){
 	free(pBookArr);
 }
 
+//######################################################
+
+int searchKunde(char pSearch[], int pSort, Kunde pKunde[], int pLength){
+while		
+}
+
+
+void addKunde(int pNummer, char *pName, char *pVorname){
+	Kunde add = createKunde(pNummer, *pName, *pVorname);	
+}
+
+void deleteKunde(){
+	
+	//NULLBUCH
+	
+	if(searchBook(pSearch, pSort, pBooks, pLength) != 0){
+		int toDelete = (searchBook(pSearch, pSort, pBooks, pLength)) - 1;	
+		pBooks[toDelete] = nullbuch;
+	}
+	else return;
+}
+
+Buch* createBookArr(int pLength){
+
+	//NULLBUCH
+	
+	Buch *bookArr;
+	bookArr =(Buch*)calloc(pLength, sizeof(Buch));
+	
+	for(int i = 0;i < pLength;i++) bookArr[i] = nullbuch;
+	
+	return bookArr;
+}
+
+void printBookArr(Buch arr[], int pLength){
+	printf("\n\n##################### Buecherregal ###################\n\n");
+	for(int i = 0;i < pLength;i++) printBook(arr[i]);
+	printf("######################################################\n\n");
+}
+
+void deleteBookArr(Buch *pBookArr){
+	free(pBookArr);
+}
+
+
+
+
 int main(void){
 	//NULLBUCH
 	
