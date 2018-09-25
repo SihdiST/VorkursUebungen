@@ -54,7 +54,7 @@ void addBook(char pISBN[], char pName[], char pAuthor[], Buch *pBooks, int pLeng
 
 void deleteBook(char pSearch[], int pSort, Buch *pBooks, int pLength){
 	
-	NULLBUCH
+	//NULLBUCH
 	
 	if(searchBook(pSearch, pSort, pBooks, pLength) != 0){
 		int toDelete = (searchBook(pSearch, pSort, pBooks, pLength)) - 1;	
@@ -76,7 +76,7 @@ Buch* createBookArr(int pLength){
 }
 
 void printBookArr(Buch arr[], int pLength){
-	printf("##################### Buecherregal ###################\n\n");
+	printf("\n\n##################### Buecherregal ###################\n\n");
 	for(int i = 0;i < pLength;i++) printBook(arr[i]);
 	printf("######################################################\n\n");
 }
@@ -102,12 +102,14 @@ int main(void){
 	nullbuch.author[3] = 'L';
 	nullbuch.author[4] = '\0';
 	
-	Buch *bookArr = createBookArr(1);
-	printBookArr(bookArr, 1);
-	addBook("123456789", "W3 R N00bs", "Jonas Hännes & Peter Altmaier", bookArr, 1);
-	printBookArr(bookArr, 1);
-	deleteBook("123456789", 0, bookArr, 1);
-	printBookArr(bookArr, 1);
+	Buch *bookArr = createBookArr(2);
+	printBookArr(bookArr, 2);
+	addBook("123456789", "W3 R N00bs", "Jonas Hännes & Peter Altmaier", bookArr, 2);
+	printBookArr(bookArr, 2);
+	
+	printBook(bookArr[searchBook("123456789", 0, bookArr, 2) - 1]);
+	deleteBook("123456789", 0, bookArr, 2);
+	printBookArr(bookArr, 2);
 	
 	
 	//printf("\n\nNullbuch:\n\n");
